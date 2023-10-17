@@ -1,0 +1,24 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import SocketProvider from "./components/SocketContext";
+import SettingsProvider from "./components/SettingsContext";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+
+ReactDOM.render(
+  <SettingsProvider>
+    <SocketProvider>
+      <App />
+    </SocketProvider>
+  </SettingsProvider>,
+  document.getElementById("root")
+);
+
+if (module.hot) {
+  module.hot.accept();
+}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.register();
