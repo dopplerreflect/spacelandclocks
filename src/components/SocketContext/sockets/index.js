@@ -4,7 +4,7 @@ import { joinChannel } from "./emit";
 
 const SOCKETSERVER =
   process.env.REACT_APP_WEBSOCKET_SERVER ||
-  "https://spaceland-clocks-vturnit-415749d8a7a5.herokuapp.com";
+  "https://vturnitclock.skydivespaceland.com";
 
 export const socket = io(SOCKETSERVER);
 socket.on("connect", msg =>
