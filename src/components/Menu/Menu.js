@@ -1,6 +1,6 @@
 import React from "react";
 import { locations } from "../../lib/location";
-import "./Menu.scss";
+import "./Menu.css";
 
 const Menu = ({ toggleMenu, menuVisible }) => {
   const navigateTo = locationCode => {
@@ -10,12 +10,12 @@ const Menu = ({ toggleMenu, menuVisible }) => {
   return (
     <div className={`Menu ${menuVisible ? "visible" : null}`}>
       <ul>
-        <li className="header" onClick={toggleMenu} />
+        <li className='header' onClick={toggleMenu} />
         {Object.keys(locations).map(locationCode => {
           const { name } = locations[locationCode];
           return (
             <li
-              className="navigable"
+              className='navigable'
               onClick={() => navigateTo(locationCode)}
               key={locationCode}
             >
@@ -23,8 +23,8 @@ const Menu = ({ toggleMenu, menuVisible }) => {
             </li>
           );
         })}
-        <li className="divider" />
-        <li className="navigable" onClick={() => navigateTo("SETTINGS")}>
+        <li className='divider' />
+        <li className='navigable' onClick={() => navigateTo("SETTINGS")}>
           Settings
         </li>
       </ul>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useInterval from "../../lib/use-interval";
-import "./LoadClocks.scss";
+import "./LoadClocks.css";
 import secondsToMMSS from "../../lib/secondsToMMSS";
 const { addMinutes, differenceInSeconds } = require("date-fns");
 
@@ -15,8 +15,8 @@ const STATUS_HOLD = STATUS_LANDED;
 /* eslint-enable */
 
 const loadsFilteredByPlanesLeastLoadNumber = loads => {
-  const groupBy = function(xs, key) {
-    return xs.reduce(function(rv, x) {
+  const groupBy = function (xs, key) {
+    return xs.reduce(function (rv, x) {
       (rv[x[key]] = rv[x[key]] || []).push(x);
       return rv;
     }, {});
@@ -24,8 +24,8 @@ const loadsFilteredByPlanesLeastLoadNumber = loads => {
   const planeGroups = groupBy(loads, "plane");
   return Object.keys(planeGroups).map(plane =>
     planeGroups[plane].reduce((res, obj) =>
-      obj.loadNumber < res.loadNumber ? obj : res
-    )
+      obj.loadNumber < res.loadNumber ? obj : res,
+    ),
   );
 };
 
@@ -39,18 +39,18 @@ const LoadClocks = ({ loadsObject }) => {
           loadNumber: loadsObject.loads.length + 1,
           slotsRemaining: 10,
           departureTime: addMinutes(new Date(), 1),
-          status: 1
+          status: 1,
         });
       }
     }
   }, [loadsObject]);
 
   return (
-    <div className="LoadClocks">
+    <div className='LoadClocks'>
       {loadsObject && loadsObject.loads && loadsObject.loads.length
-        ? loadsFilteredByPlanesLeastLoadNumber(
-            loadsObject.loads
-          ).map((load, i) => <LoadClock load={load} key={i} />)
+        ? loadsFilteredByPlanesLeastLoadNumber(loadsObject.loads).map(
+            (load, i) => <LoadClock load={load} key={i} />,
+          )
         : null}
     </div>
   );

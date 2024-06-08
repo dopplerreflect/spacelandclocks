@@ -3,7 +3,7 @@ import SocketContext from "./components/SocketContext/Context";
 import { Menu } from "./components/Menu";
 import Screen from "./components/Screen";
 import { Settings } from "./components/Settings";
-import "./App.scss";
+import "./App.css";
 import locations from "./locations.json";
 const locationCodes = Object.keys(locations).map(i => i);
 
@@ -18,7 +18,7 @@ const codeFromUrl = () => {
   return (
     Object.keys(locations).find(
       key =>
-        locations[key].subdomain === document.location.hostname.split(".")[0]
+        locations[key].subdomain === document.location.hostname.split(".")[0],
     ) || "ATL"
   );
 };
@@ -61,7 +61,7 @@ export default App;
 
 const Hamburger = ({ toggleMenu, menuVisible }) => {
   return (
-    <div className="Hamburger" onClick={toggleMenu}>
+    <div className='Hamburger' onClick={toggleMenu}>
       <div className={`line ${menuVisible ? "active" : null} top`} />
       <div className={`line ${menuVisible ? "active" : null} middle`} />
       <div className={`line ${menuVisible ? "active" : null} bottom`} />

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import useInterval from "../../lib/use-interval";
 import SettingsContext from "../SettingsContext/Context";
 import moment from "moment-timezone";
-import "./Header.scss";
+import "./Header.css";
 
 const Header = ({ temperature, locationTimezone, loadsFlownToday }) => {
   const { celsius, dispatch } = useContext(SettingsContext);
@@ -14,13 +14,13 @@ const Header = ({ temperature, locationTimezone, loadsFlownToday }) => {
     dispatch({ type: "toggleBoolSetting", attribute });
   };
   return (
-    <div className="Header">
-      <div className="loadsFlown">Loads Today: {loadsFlownToday}</div>
-      <div className="time">{time && time}</div>
+    <div className='Header'>
+      <div className='loadsFlown'>Loads Today: {loadsFlownToday}</div>
+      <div className='time'>{time && time}</div>
       <div
-        className="temperature"
+        className='temperature'
         style={{
-          color: `hsl(${280 - temperature * 3}, 100%, 50%)`
+          color: `hsl(${280 - temperature * 3}, 100%, 50%)`,
         }}
         onClick={() => toggleBoolSetting("celsius")}
       >

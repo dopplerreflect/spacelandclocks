@@ -1,0 +1,61 @@
+.Menu {
+  font-family: "HelveticaNeue";
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(240, 50%, 0%, 0.9);
+}
+.Menu ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.Menu ul li {
+  padding: 0.5em 0 0.5em 0;
+  font-size: 2em;
+  border-bottom: 1px solid white;
+}
+.Menu ul li.navigable:hover {
+  cursor: pointer;
+  background-color: hsla(240, 50%, 50%, 0.9);
+}
+.Menu ul li.header {
+  height: calc(5vh - 1em);
+}
+.Menu ul li.divider {
+  cursor: none;
+}
+.Menu.visible {
+  left: 0px;
+}
+.Hamburger {
+  z-index: 101;
+  position: absolute;
+  top: 1vh;
+  left: 1vh;
+  flex: 1;
+}
+.Hamburger .line {
+  display: block;
+  width: 3vh;
+  height: 0.75vh;
+  margin-bottom: 0.25vh;
+  border-radius: 0.25vh;
+  background-color: white;
+}
+.Hamburger:hover {
+  cursor: pointer;
+}
+.Hamburger.active.top {
+  transform: translateY(0.5vh) rotate(-45deg);
+}
+.Hamburger.active.bottom {
+  transform: translateY(-0.5vh) rotate(45deg);
+}
+.Hamburger.active.middle {
+  display: none;
+}

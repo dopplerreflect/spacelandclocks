@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useCallback } from "react";
 import useInterval from "../../lib/use-interval";
 import SettingsContext from "../SettingsContext/Context";
-import "./WindsAloft.scss";
+import "./WindsAloft.css";
 const colorForSpeed = speed => `hsla(${120 - speed * 2}, 100%, 50%, 0.9)`;
 
 const WindsAloft = ({ windsAloftSettings }) => {
