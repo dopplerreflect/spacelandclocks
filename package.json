@@ -3,8 +3,8 @@
   "main": "server.js",
   "version": "0.1.0",
   "engines": {
-    "node": "20.12.2",
-    "yarn": "^1.22.22"
+    "node": "20.x",
+    "yarn": "^1.22.x"
   },
   "private": true,
   "proxy": "http://localhost:5000",
