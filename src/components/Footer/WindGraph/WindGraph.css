@@ -1,0 +1,99 @@
+@import "./chartist.min.css";
+
+.ct-chart {
+  height: 100%;
+  fill: transparent;
+}
+.ct-chart .ct-series-a .ct-line {
+  stroke: blue;
+  stroke-width: 2px;
+}
+.ct-chart .ct-series-b .ct-line {
+  stroke: red;
+  stroke-width: 2px;
+}
+.LineGraph {
+  position: absolute;
+  top: 0;
+  left: 1.25%;
+  width: 100%;
+  height: 100%;
+}
+.GraphBars {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.GraphBars .Bar {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+}
+.GraphAverages,
+.GraphHighs {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 1.25%;
+  height: 100%;
+  width: 100%;
+}
+.GraphAverages .GraphDot,
+.GraphHighs .GraphDot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+}
+.GraphHighs {
+  z-index: 4;
+}
+.GraphBackground {
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(transparent, 30%, black);
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.GraphBackground .Bar {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+}
+.GraphBackground .Grad {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px dashed hsla(240, 100%, 75%, 0.15);
+}
+.GraphBackground .Grad.label {
+  border-bottom: 1px dashed hsla(240, 100%, 77%, 0.75);
+  box-shadow: 0px 0px 3px hsl(240, 100%, 77%);
+}
+.GraphBackground .Grad.label::before {
+  font-size: small;
+  color: rgba(138, 138, 255, 0.75);
+  content: attr(alt);
+  position: absolute;
+  right: 0px;
+  transform: translateY(-1rem);
+}
+.GraphBackground .VertGrad {
+  position: absolute;
+  height: 100%;
+  border-right: 1px dashed hsla(240, 0%, 100%, 0.15);
+}
+.GraphBackground .VertGrad.label {
+  border-right: 1px dashed hsla(240, 100%, 77%, 0.75);
+  box-shadow: 0px 0px 3px hsl(240, 100%, 77%);
+}
+.GraphBackground .VertGrad.label::before {
+  font-size: small;
+  color: hsla(240, 100%, 77%, 0.75);
+  content: attr(alt);
+  position: absolute;
+  width: 4rem;
+  transform: rotate(270deg) translate(-1rem, -2.5rem);
+}

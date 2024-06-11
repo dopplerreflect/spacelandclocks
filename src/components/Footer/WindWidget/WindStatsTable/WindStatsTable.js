@@ -1,6 +1,6 @@
 import React from "react";
 import { colorForSpeed } from "../../../../lib/wind-funcs";
-import "./WindStatsTable.scss";
+import "./WindStatsTable.css";
 
 let windSpeeds;
 
@@ -27,13 +27,13 @@ const StatsRow = ({ minute }) => {
 
 const WindStatsTable = ({ weather }) => {
   if (!weather.prevWindSpeeds)
-    return <div className="WindStatsTable">No Weather Data.</div>;
+    return <div className='WindStatsTable'>No Weather Data.</div>;
 
   windSpeeds = weather.prevWindSpeeds
     ? [...weather.prevWindSpeeds].reverse()
     : [];
   return (
-    <div className="WindStatsTable">
+    <div className='WindStatsTable'>
       <table>
         <thead>
           <tr>

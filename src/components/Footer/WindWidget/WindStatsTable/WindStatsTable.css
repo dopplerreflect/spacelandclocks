@@ -1,0 +1,21 @@
+.WindStatsTable {
+  font-size: 2vh;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px black, -1px -1px 1px black;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+  left: 2vh;
+}
+.WindStatsTable table {
+  width: calc(30vh - 2em);
+}
+.WindStatsTable th {
+  font-size: 0.75em;
+}
+.WindStatsTable td {
+  text-align: center;
+}
+.WindStatsTable td:first-child {
+  text-align: left;
+}

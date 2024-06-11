@@ -6,9 +6,9 @@ import {
   GraphBars,
   GraphAverages,
   GraphHighs,
-  LineGraph
+  LineGraph,
 } from "./WindGraph";
-import "./Footer.scss";
+import "./Footer.css";
 
 const Footer = ({ weather, fakeData }) => {
   const { prevWindSpeeds } = weather;

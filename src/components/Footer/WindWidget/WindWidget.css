@@ -1,0 +1,9 @@
+#WindWidget {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  border-radius: 10px;
+}
+#WindWidget .Compass {
+  display: inline-block;
+}

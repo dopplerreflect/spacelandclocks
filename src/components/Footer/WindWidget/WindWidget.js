@@ -1,11 +1,11 @@
 import React from "react";
 import { Compass } from "./Compass";
 import { WindStatsTable } from "./WindStatsTable";
-import "./WindWidget.scss";
+import "./WindWidget.css";
 
 const WindWidget = ({ weather }) => {
   return (
-    <div id="WindWidget">
+    <div id='WindWidget'>
       <Compass weather={weather} />
       <WindStatsTable weather={weather} />
     </div>

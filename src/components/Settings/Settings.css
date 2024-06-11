@@ -1,0 +1,23 @@
+.Settings.Screen section {
+  width: calc(100% - 2em);
+  padding: 0.5em;
+  border: 2px solid white;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.Settings.Screen section header {
+  font-weight: bold;
+}
+.Settings.Screen section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.Settings.Screen section ul li {
+  margin: 0.5em;
+  padding: 0.5em;
+  background: hsla(240, 50%, 50%, 0.9);
+}
+.Settings.Screen section ul li label {
+  padding-left: 1em;
+}
