@@ -1,11 +1,11 @@
 import React from "react";
 import { colorForSpeed } from "../../../../lib/wind-funcs";
 import "./Compass.css";
-import GhostArrows from "./GhostArrows";
+// import GhostArrows from "./GhostArrows";
 import HashMarks from "./HashMarks";
 
 const Compass = ({ weather }) => {
-  const { windDirection, prevWindDirs, windSpeed } = weather;
+  const { windDirection, windSpeed } = weather;
   let rotation;
   const correctedRotation = degree => {
     let angle;
