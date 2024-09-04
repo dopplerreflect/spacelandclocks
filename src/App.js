@@ -19,7 +19,7 @@ const codeFromUrl = () => {
     Object.keys(locations).find(
       key =>
         locations[key].subdomain === document.location.hostname.split(".")[0],
-    ) || "ATL"
+    ) || "HOU"
   );
 };
 
@@ -61,7 +61,10 @@ export default App;
 
 const Hamburger = ({ toggleMenu, menuVisible }) => {
   return (
-    <div className='Hamburger' onClick={toggleMenu}>
+    <div
+      className='Hamburger'
+      onClick={toggleMenu}
+    >
       <div className={`line ${menuVisible ? "active" : null} top`} />
       <div className={`line ${menuVisible ? "active" : null} middle`} />
       <div className={`line ${menuVisible ? "active" : null} bottom`} />

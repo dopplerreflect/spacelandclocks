@@ -11,7 +11,7 @@ export const getLocationCodes = () => Object.keys(validLocations);
 export const getLocationCodeFromPathName = () => {
   const hash = window.location.hash.replace(/^#/, "");
   if (allLocationCodes.includes(hash)) return hash;
-  return "ATL";
+  return "HOU";
 };
 
 export const locationCode = getLocationCodeFromPathName();

@@ -1,10 +1,4 @@
 {
-  "ATL": {
-    "name": "Atlanta",
-    "tz": "America/New_York",
-    "windsAloftSettings": { "region": "mia", "station": "ATL" },
-    "subdomain": "atlantaclock"
-  },
   "CLW": {
     "name": "Clewiston",
     "tz": "America/New_York",
